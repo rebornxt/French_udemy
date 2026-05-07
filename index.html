@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5efe2">
+<title>Mon Cours de Français</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="#/" class="brand">
+    <span class="brand-mark">F</span>
+    <span class="brand-text">
+      <span class="brand-title">Mon&nbsp;Cours&nbsp;de Français</span>
+      <span class="brand-sub">— vocabulaire, leçons & prononciation —</span>
+    </span>
+  </a>
+  <nav class="topnav">
+    <a href="#/" data-route="home">Accueil</a>
+    <a href="#/extras" data-route="extras">Extras</a>
+    <a href="#/settings" data-route="settings" class="settings-link" aria-label="Réglages">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </a>
+  </nav>
+</header>
+
+<main id="app" class="app">
+  <div class="loading">
+    <div class="loading-orn">⚜</div>
+    <div>Chargement du cours…</div>
+  </div>
+</main>
+
+<footer class="footer">
+  <span>Application personnelle — pour étudier le français.</span>
+  <span class="tts-status" id="tts-status" title="État du moteur de prononciation"></span>
+</footer>
+
+<!-- Audio element used by TTS module -->
+<audio id="tts-audio" preload="none"></audio>
+
+<!-- Toast container -->
+<div id="toast" class="toast" hidden></div>
+
+<script src="config.js"></script>
+<script src="tts.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
